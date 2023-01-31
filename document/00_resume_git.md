@@ -7,9 +7,9 @@
 - git status (permet de vérifier l'état de notre dépôt:)
     - Des fichiers doivent être indexé si ils apparaissent en rouge
     - en vert ils ont été indexé et on doit faire un commit
-    - après avoir fait un commit 
-- git add --all ou git add  .
-- git commit -m "s2c1 on décrit les modification"
+    - après avoir fait un commit le dépôt est clair
+- git **add --all** ou **git add  .**
+- git **commit -m "s2c1 on décrit les modification"**
 - git log
 - git log --oneline
 - git remote add 4w4 https://github.com/.....git
