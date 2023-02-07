@@ -9,9 +9,13 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header>
-       <?php  wp_nav_menu(array(
-                            "menu" => "entete"
+    <header class="site__entete">
+       <?php the_custom_logo(); ?> 
+       <?php  wp_nav_menu(array( 
+                    "menu" => "entete",
+                    "container" => "nav",
+                    "container_class" => "menu__entete"
+
                  )); ?>
         <h1><a class="site__titre" href="<?= bloginfo('url'); ?>"><?= bloginfo('name'); ?></a></h1>
         <h2><?= bloginfo('description'); ?></h2>
