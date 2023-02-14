@@ -1,16 +1,16 @@
-# Laboratoire #1
+# Laboratoire #3
 ## 4W4-Conception d'interfaces et développement Web
 ### Auteur : Eddy Martin
 
 #### Objectifs
-- Installer Wordpress localement
-- Réaliser une première version d'un thème
+- Améliorer la page d'accueil avec les flexbox
+- Réaliser le formatage des article markdown
 
 #### Liens de référence
-- Site du prof sur **siteground**
-    - https://eddytuto.sg-host.com/
-- Github **eddytuto**    
-- https://github.com/eddytuto
+- Site sur le serveur Web distant **siteground**
+    - https://cidweb.sg-host.com/
+ 
+
 - https://fr.wordpress.org/
 - Pour visualise sur VC installer  « Markdown preview »
 - Pour activer `ctrl-shift-v`
