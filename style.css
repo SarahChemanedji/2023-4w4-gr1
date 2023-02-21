@@ -401,14 +401,17 @@ ol li {
 
 ul li::before {
   content: "-";
-  background: lightgray;
-  border-radius: 0.5rem;
+  background: rgb(67, 224, 235);
+  border-radius: 50%;
   padding-inline: 0.3rem;
   margin-inline-end: 0.3rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 ul li li::before {
   background: transparent;
+  content: ".";
 }
 
 /*
@@ -443,6 +446,13 @@ pre {
 }
 .menu__entete .menu .menu-item a {
   padding: 3px 5px;
+}
+.menu__entete .menu .menu-item::before {
+  content: "";
+  background: transparent;
+  border-radius: 0;
+  padding-inline: 0;
+  margin-inline-end: 0;
 }
 
 .blocflex {
