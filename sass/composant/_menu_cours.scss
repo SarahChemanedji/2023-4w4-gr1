@@ -6,6 +6,7 @@
         flex-wrap: wrap;
         @media screen and (min-width:$largeur__bureau) {
             flex-direction: column;
+            justify-content: flex-start;
         }
 
     .menu-item{
