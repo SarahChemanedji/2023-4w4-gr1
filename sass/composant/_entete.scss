@@ -1,0 +1,96 @@
+.entete__nav{ // log, menu, form de recherche, bouton burger
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+
+
+
+.site__titre {
+    font-size: clamp(1rem, 0.3864rem + 2.4545vw, 4.375rem);
+    font-family: 'Smokum', cursive;
+    a {
+        text-decoration: none;
+        
+    }
+}
+
+.menu__recherche { // menu, form de recher, bouton
+    display : flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    @media screen and (min-width : $largeur__bureau) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+/* ///////////////////////////////// menu__entete */
+.menu__entete{ // nav
+    /*
+        position:absolute;
+        top: 100px;
+        right: 0;
+        */
+        transform: translateX(300px);
+        transition: transform .5s;
+        @media screen and (min-width: $largeur__tablette) {
+           // position : static;
+            transform: translateX(0); 
+        }
+    .menu { // ul
+        display:flex;
+        flex-direction: column;
+        align-items: flex-end;
+        list-style-type: none;
+        @media screen and (min-width: $largeur__tablette) {
+            flex-direction: row;
+            align-items: center; 
+        }
+            .menu-item { //li
+                
+                a {
+                    display : block;
+                    padding : 3px 5px;
+                    text-decoration : none;
+                }
+            }
+
+    }
+
+}
+
+/* ---------------------------------------- pour annuler le pseude element ::before */
+ .menu  .menu-item::before {
+    content: "";
+    background:transparent;
+    border-radius: 0;
+    padding-inline: 0;
+    margin-inline-end: 0;
+    width: 0;
+    height: 0;
+      }
+      ul li li::before
+      {
+        background: transparent;
+        content: "";
+      }
+/* ---------------------------------------------------------- bouton burger  */     
+.burger {
+    border : 1px solid #aaa;
+    display : block; 
+    @media screen and (min-width: $largeur__tablette) {
+     display : none;
+    }
+
+} 
+#chkBurger:checked ~ .menu__entete {
+    transform : translateX(0);
+}
+
+#chkBurger {
+    display : none;
+
+}

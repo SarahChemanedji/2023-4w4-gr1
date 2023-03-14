@@ -1,13 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mon 4W4</title>
-    <?php wp_head() ?>
-</head>
-<body>
-    <h1>Bienvenue sur 4W4</h1>
-</body>
-</html>
+<?php 
+/**
+ * index.php est le modèle par défaut du thème 4w4 
+ */
+?>
+
+<?php get_header(); ?>
+    <main>
+        <pre>index.php.php</pre>
+        <h1>Bienvenue sur 4W4</h1>
+        <?php 
+        if (have_posts()):
+            while(have_posts()):
+                the_post();  // extrait un objet «post» ?>
+                <article>
+                    <h3><?php the_title();  // affiche le titre du post ?></h3>
+                    <h6>Extrait:</h6><?php the_excerpt(); ?>
+                    <h6>Le contenu:</h6><?php the_content(); ?>
+                </article>
+            <?php endwhile; ?>
+        <?php endif; ?>
+        
+    </main>
+    
+    <?php get_footer(); ?>

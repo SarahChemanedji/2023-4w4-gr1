@@ -1,0 +1,35 @@
+/*
+Theme Name: 4w4gr1 test
+Theme URI: https://github.com/eddytuto/2023-4w4-gr1
+Author: Eddy Martin
+Version: 1.0.0
+Author URI: https://eddytuto.sg-host.com/
+Description: Thème réalisé dans le cours 4W4
+Requires at least: 6.0
+Tested up to: 6.1.1
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: 4w4-gr1-Eddy-martin
+*/
+
+@import "variable/dimension";
+@import "normalize/normalize";
+// @import "normalize/box-sizing";
+
+/* --------------------------------------------- base */
+@import "base/heading";
+@import "base/markdown";
+// @import "base/espacement";
+// @import "base/lien";
+// @import "base/list";
+
+/* --------------------------------------------- composant */
+ @import "composant/entete";
+ @import "composant/blocflex";
+ @import "composant/recherche";
+ @import "composant/burger";
+ @import "composant/menu_cours";
+
+ /* --------------------------------------------- layout */
+ @import "layout/aside-contenu";
