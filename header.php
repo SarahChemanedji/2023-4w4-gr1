@@ -23,9 +23,9 @@ $nouvel_class="";
                                 "menu" => "entete",
                                 "container" => "nav",
                                 "container_class" => "menu__entete"
-
-                            )); ?>
-                <?= get_search_form(); ?>   
+                            )); ?>   
+                <?= get_search_form(); ?>  
+               
             </div>         
         </section>
         <h1 class="site__titre"><a  href="<?= bloginfo('url'); ?>"><?= bloginfo('name'); ?></a></h1>
