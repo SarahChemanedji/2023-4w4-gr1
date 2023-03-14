@@ -12,20 +12,25 @@
 $nouvel_class="";
  if (is_front_page()) {
     $nouvel_class = "no-aside";
- }?>
+ }?> 
 
 <body class="site <?= $nouvel_class ?>  ">
     <header class="site__entete">
         <section class="entete__nav">
             <?php the_custom_logo(); ?> 
             <div class="menu__recherche">
+                <input type="checkbox"  id="chkBurger"> 
                 <?php  wp_nav_menu(array( 
                                 "menu" => "entete",
                                 "container" => "nav",
                                 "container_class" => "menu__entete"
-                            )); ?>   
+
+                            )); ?>
                 <?= get_search_form(); ?>  
-               
+                
+                <label class="burger" for="chkBurger">
+                    <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000" width="32" height="32">
+                </label> 
             </div>         
         </section>
         <h1 class="site__titre"><a  href="<?= bloginfo('url'); ?>"><?= bloginfo('name'); ?></a></h1>

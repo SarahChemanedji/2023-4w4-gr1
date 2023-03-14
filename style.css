@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: 4w4-gr1 Eddy martin
+Theme Name: 4w4gr1 test
 Theme URI: https://github.com/eddytuto/2023-4w4-gr1
 Author: Eddy Martin
 Version: 1.0.0
@@ -433,6 +433,7 @@ pre {
 
 .site__titre {
   font-size: clamp(1rem, 0.3864rem + 2.4545vw, 4.375rem);
+  font-family: "Smokum", cursive;
 }
 .site__titre a {
   text-decoration: none;
@@ -447,37 +448,76 @@ pre {
   .menu__recherche {
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
   }
 }
 
 /* ///////////////////////////////// menu__entete */
-.menu__entete .menu {
-  display: flex;
-  position: absolute;
-  top: 3rem;
-  right: 0;
-  flex-direction: column;
-  list-style-type: none;
-  justify-content: flex-end;
+.menu__entete {
+  /*
+      position:absolute;
+      top: 100px;
+      right: 0;
+      */
+  transform: translateX(300px);
+  transition: transform 0.5s;
 }
-@media screen and (min-width: 500px) {
-  .menu__entete .menu {
-    position: static;
-    top: auto;
-    right: auto;
-    flex-direction: row;
+@media screen and (min-width: 800px) {
+  .menu__entete {
     transform: translateX(0);
   }
 }
-.menu__entete .menu .menu-item a {
-  padding: 3px 5px;
+.menu__entete .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  list-style-type: none;
 }
-.menu__entete .menu .menu-item::before {
+@media screen and (min-width: 800px) {
+  .menu__entete .menu {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.menu__entete .menu .menu-item a {
+  display: block;
+  padding: 3px 5px;
+  text-decoration: none;
+}
+
+/* ---------------------------------------- pour annuler le pseude element ::before */
+.menu .menu-item::before {
   content: "";
   background: transparent;
   border-radius: 0;
   padding-inline: 0;
   margin-inline-end: 0;
+  width: 0;
+  height: 0;
+}
+
+ul li li::before {
+  background: transparent;
+  content: "";
+}
+
+/* ---------------------------------------------------------- bouton burger  */
+.burger {
+  border: 1px solid #aaa;
+  display: block;
+}
+@media screen and (min-width: 800px) {
+  .burger {
+    display: none;
+  }
+}
+
+#chkBurger:checked ~ .menu__entete {
+  transform: translateX(0);
+}
+
+#chkBurger {
+  display: none;
 }
 
 .blocflex {
@@ -504,7 +544,45 @@ pre {
   height: 3rem;
 }
 
-/* --------------------------------------------- layout */
+.burger {
+  width: 2.8rem;
+  margin: 10px;
+}
+
+.menu-cours-container .menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1000px) {
+  .menu-cours-container .menu {
+    flex-direction: column;
+  }
+}
+.menu-cours-container .menu .menu-item {
+  flex: 1 0 40px;
+}
+.menu-cours-container .menu .menu-item a {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+}
+@media screen and (min-width: 1000px) {
+  .menu-cours-container .menu .menu-item a {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+}
+.menu-cours-container .menu .menu-item a p {
+  display: none;
+}
+@media screen and (min-width: 1000px) {
+  .menu-cours-container .menu .menu-item a p {
+    display: block;
+  }
+} /* --------------------------------------------- layout */
 /**
 Mise en page générale avec display:grid
 

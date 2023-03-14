@@ -1,5 +1,5 @@
 /*
-Theme Name: 4w4-gr1 Eddy martin
+Theme Name: 4w4gr1 test
 Theme URI: https://github.com/eddytuto/2023-4w4-gr1
 Author: Eddy Martin
 Version: 1.0.0
@@ -28,7 +28,8 @@ Text Domain: 4w4-gr1-Eddy-martin
  @import "composant/entete";
  @import "composant/blocflex";
  @import "composant/recherche";
-
+ @import "composant/burger";
+ @import "composant/menu_cours";
 
  /* --------------------------------------------- layout */
  @import "layout/aside-contenu";
