@@ -557,6 +557,7 @@ ul li li::before {
 @media screen and (min-width: 1000px) {
   .menu-cours-container .menu {
     flex-direction: column;
+    justify-content: flex-start;
   }
 }
 .menu-cours-container .menu .menu-item {
@@ -582,7 +583,9 @@ ul li li::before {
   .menu-cours-container .menu .menu-item a p {
     display: block;
   }
-} /* --------------------------------------------- layout */
+}
+
+/* --------------------------------------------- layout */
 /**
 Mise en page générale avec display:grid
 
@@ -590,7 +593,7 @@ Mise en page générale avec display:grid
 .site__entete {
   grid-area: header;
   padding: 1rem clamp(1rem, 3vw, 20rem);
-  background-color: antiquewhite;
+  background-color: transparent;
 }
 
 .site__main {
