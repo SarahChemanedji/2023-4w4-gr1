@@ -5,6 +5,7 @@
  * 
  */
 $titre = get_the_title();
+if (substr($titre,0,1) == '0'){$titre = substr($titre,1);}
 // retirer le premier du titre d'article de catégorie note-4w4
 // if (substr($titre,0,1) == '0') {}...
 ?>
@@ -14,8 +15,8 @@ $titre = get_the_title();
 </article>
 
 <?php
-// the excerpt()  // le résumé du post
-// the_content() // affiche le contenu complet  du post
+// the excerpt()  // echo du résumé  post
+// the_content() // echo le contenu complet  du post
 
 
 ?>
